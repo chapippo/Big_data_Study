@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+
+<body>
+    <div>Lorem ipsum dolor sit amet.</div>
+    <div id="root"></div>
+    <div id="root2">
+        <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores omnis quis quaerat, officiis voluptas
+            blanditiis labore, dolorum officia architecto ipsa, error eligendi ad similique tenetur iste earum optio
+            quibusdam nostrum.</h1>
+    </div>
+    <script type="text/babel">
+        let insert = prompt('이름을 입력하세요')        
+        let imageUrl = ''
+        console.log(insert)
+        // let component = ''
+        switch (insert) {
+                case '토끼':
+                    imageUrl = 'https://w.namu.la/s/bbd326fdf7f68a4a894160e713916efcdafd9105c3b9ff581f45d3d7f3306d200bd1dd5bfe8453db54e232d7acea034af1da16aaa0777839312a3107d8862b36bfeed16c8534ed4a2a8fe9b237371d321b9eceb0de6bf9ebd2e99577eef9acec'
+                break
+                case '호랑이':
+                    imageUrl='https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Siberian_Tiger_by_Malene_Th.jpg/300px-Siberian_Tiger_by_Malene_Th.jpg'
+                break
+                case '사자':
+                    imageUrl='https://dimg.donga.com/ugc/CDB/SHINDONGA/Article/5f/9a/4c/f6/5f9a4cf615cfd2738de6.jpg'
+                break
+                default:
+                imageUrl='https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Emoji_u2753.svg/800px-Emoji_u2753.svg.png'
+            
+        }
+        let component = <div>
+                        <h1>{insert}</h1><img src={imageUrl}></img>
+                    </div>
+        let container = document.getElementById('root')
+        ReactDOM.render(component,container)
+    </script>
+</body>
+
+</html>

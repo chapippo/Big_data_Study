@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9. 형 변환</title>
+</head>
+<body>
+    <script>
+        let num = prompt('숫자 입력하기')   //이 시점에선 '문자열'
+        num %=12    //이 때도 '문자열'
+        num++   //이 때는 숫자
+        num = Number(num)   //이 때에 돼서야 숫자가 됨
+        console.log(num)
+
+        //결론 : 입력받는 값은 기본적으로 문자다.
+        //숫자로 쓰고 싶다면 별도의 처리가 필요하다!
+
+        let test = 20
+        if(test=='20')
+            console.log('==은 값을 비교')
+        if(test==='20')
+            console.log('타입도 비교함!')
+
+        console.log(test=='20')
+        console.log(test==='20')
+
+        //4계절문제 이번엔 if문으로
+        //여기에서는 Number 형변환 안 해도 됨
+        let mymonth = prompt('몇월생?')
+        document.querySelector('body').style.backgroundRepeat="no-repeat"   //body tag에 대해서 
+
+        //mymonth=Number(mymonth)와 같은 처리 필요없음
+        if(mymonth==12 || mymonth==1 || mymonth==2) //==이면 문자열, 숫자 같게 받음???
+        document.querySelector('body').background
+        ='https://www.hdec.kr/FileContents/EditorImg/20211227/%EA%B0%95%EC%9B%90%20%EC%A0%95%EC%84%A0%20%EB%A7%8C%ED%95%AD%EC%9E%AC_770.jpg'
+
+        //크기 비교도 된다. (Number로 바꾸지 않아도) (switch는 바꿔줘야???)
+        else if(mymonth>=3 && mymonth<=5)
+        document.querySelector('body').background
+        ='https://mediahub.seoul.go.kr/wp-content/uploads/2015/02/ec8056cf7e38460f6269f97c67163269.jpg'
+
+        else if(mymonth>=6 && mymonth<=8)
+        document.querySelector('body').background
+            ='https://a.storyblok.com/f/112937/568x378/8fc63bb2b8/photo-1507525428034-b723cf961d3e.jpg/m/620x0/filters:quality(70)/'
+
+        else if(mymonth>=9 && mymonth<=11)
+        document.querySelector('body').background
+        ='https://file.mk.co.kr/meet/neds/2018/10/image_readtop_2018_630347_15391511673487754.jpg'
+
+        else    //엉뚱한 값일 경우
+        {
+            document.querySelector('body').background
+            ='http://image.dongascience.com/Photo/2018/01/15166853103542[1].jpg'
+        }
+    </script>    
+</body>
+</html>

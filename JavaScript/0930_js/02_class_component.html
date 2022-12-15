@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02. 리액트 클래스 컴포넌트</title>
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">  //오버라이딩 @@
+        //name, imgUrl은 객체 속성
+        //
+        //
+        //props = properties(속성)의 약자
+        class MyApp extends React.Component {
+            //render는 container에 그릴 component를 리턴해줌
+            render() {
+                return <div>
+                    <h1>{this.props.name}</h1>
+                    <img src={this.props.imgUrl}/>
+                </div>
+            }
+        }
+        const container = document.getElementById('root')
+        ReactDOM.render(<MyApp name='이진용' 
+        imgUrl='http://t1.daumcdn.net/media/img-section/sports13/player/6/20200084.jpg'/>, container)
+    </script>
+</body>
+</html>

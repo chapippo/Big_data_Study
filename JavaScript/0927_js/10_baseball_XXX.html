@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10. 야구게임</title>
+    <style>
+        button {
+            width: 30px;
+            height: 30px;
+            margin-left: 20px;
+            font-size: 20px;
+        }
+        #answer,#submit,#cancel {
+            width: 100px;
+            height: 50px;
+            font-size: 20px;
+        }
+        #input {
+            position: fixed;
+            top: 50px;
+            left: 150px;
+        }
+        #time {
+            position: fixed;
+            top: 50px;
+            left: 500px;
+        }
+    </style>
+</head>
+<body>
+    <div style="height: 60px;">
+        <h1 id="output" style="margin-left: 170px;"></h1>
+    </div>
+    <div>
+        <div style="margin-bottom: 20px;">
+            <button class="choiceValue"></button>
+            <button class="choiceValue"></button>
+            <button class="choiceValue"></button>
+            <button class="choiceValue"></button>
+            <button class="choiceValue"></button>
+        </div>
+        <div style="margin-bottom: 20px;">
+            <button class="choiceValue"></button>
+            <button class="choiceValue"></button>
+            <button class="choiceValue"></button>
+            <button class="choiceValue"></button>
+            <button class="choiceValue"></button>
+        </div>
+    </div>
+    <button id="cancel" style="margin-left: 20px;">취소</button>
+    <button id="submit" style="margin-left: 20px;">제출</button>
+    <!-- div[style='height:60px'] -->
+    <div style="height:60px">
+        <h3 id="input" style="margin-left: 170px;"></h3>
+        <h5 id="time"></h5>    
+    </div>
+
+    <button id="answer">
+        정답은 ?
+    </button>
+
+    <script>
+        //정답을 먼저 생성해야 함
+        let output = ''
+        let array = []
+        let input = 0
+        do {
+            input=Math.floor(Math.random()*10) //0~9
+            const idx = array.indexOf(input)
+            if(idx==-1) {
+                array.push(input)
+                output += input
+            }
+        }while(array.length<3)
+        //////////////////////프로그램 시작시 정답 생성하는 부분
+
+
+
+        let cancel = document.querySelector('#cancel')
+        let submit = document.querySelector('#submit')
+        //querySelector랑 getElement 시리즈 모두 
+        //알고 있어야 된다.
+        let h1output = document.getElementById('output')
+        let h3input = document.getElementById('input')
+
+        let answer = document.getElementById('answer')
+        let time = document.getElementById('time')
+        let count = 0
+        let timecount = 0
+
+
+        //실시간으로 숫자 올라가게 하기
+        let timeCountInterval = setInterval (
+            function() {
+                timecount++
+                time.innerText = timecount
+            }, 100
+        )
+
+
+
+        let buttons = document.getElementsByClassName('choiceValue')
+            //== document.querySelectorAll('.choiceValue')
+        for(let i = 0; i<buttons.length; i++)
+            buttons[i].textContent = i
+
+        
+        //버튼 눌렀을 때, 글자 나타나게 하기
+        for(let i = 0; i<buttons.length; i++)
+        {
+            buttons[i].addEventListener('click',
+            function(){
+                // i 값이 이 안에 이미 있다면 실행 안 함
+                if(h1output.innerHTML.includes(i)==false)
+                {
+                    //길이가 3 이상이면 실행 안 함
+                    if(h1output.innerHTML.length<3)
+                        h1output.innerHTML += i
+                }
+            })
+        }
+
+        //정답 맞췄거나 끝까지 못 맞춰서
+        //새로운 답을 내야 하는 경우
+        function shuffleNewNumber() {
+            //버튼들에 적용된 스타일들을 해지
+            for(let i = 0; i<buttons.length; i++)
+            {
+                //색상 적용된 거 없애기
+                buttons[i].style.color=''
+                //disabled : 클릭 못하게 하는 옵션
+                //클릭 못하게 한 게 있다면 그거 없애기
+                //즉 버튼 클릭되게 하기
+                buttons[i].disabled = false //클릭 할 수 있게
+            }
+        }
+
+        //정답 초기화(다시 뽑아냄)
+        array = []
+        input = 0
+        output = ''
+
+        do {
+            input=Math.floor(Math.random()*10) //0~9
+            const idx = array.indexOf(input)
+            if(idx==-1) {
+                array.push(input)
+                output += input
+            }
+        }while(array.length<3)
+
+
+        cancel.addEventListener('click',
+        function(){
+            h1output.innerHTML=''
+            answer.innerHTML='정답은?'
+        })
+
+        answer.addEventListener('click', 
+        function(){
+            this.innerHTML = '정답은 '+output
+        })
+
+        submit.addEventListener('click', function(){
+            if(h1output.innerHTML.length != 3)
+            {
+                alert("3글자를 입력하세요.")
+                return
+            }
+            count++ //시도 횟수
+            if(output == h1output.innerHTML)    //정답 맞춤
+            {
+                count=0     
+                alert('정답!')
+                if(timecount<100)
+                    alert("천재")
+                else
+                    alert('보통')
+                h3input.innerHTML = ''
+                shuffleNewNumber()  //정답 다시 만들기
+                h1output.innerHTML = ''
+                answer.innerHTML = '정답은?'
+                timecount = 0
+
+                //타이머 리셋
+                clearInterval(timeCountInterval)
+                timeCountInterval = setInterval(
+                    function() {
+                        timecount++
+                        time.innerHTML = timecount
+                    },100
+                )
+            }
+        })
+
+        // const tries = 0
+
+        let strike = 0
+        let ball = 0
+        for(let i = 0; i<array.length; i++)
+        {
+            const idx = value.indexOf(array[i])
+            if(idx > -1)
+            {
+            if(idx === i)
+                strike++
+            else
+                ball++
+            }
+        }
+
+        if(strike === 0 && ball === 0)
+        {
+            count++
+            h3input.innerHTML = `${input} : ${count}아웃`
+        }
+        else
+        {
+            h3input.innerHTML = `${input} : ${strike}S ${ball}B`
+        }
+        input.push(value)
+
+        // if(count>9)
+        // {
+
+        // }
+
+        
+    </script>
+</body>
+</html>

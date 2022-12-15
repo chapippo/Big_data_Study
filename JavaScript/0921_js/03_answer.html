@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text">
+    <button>체크하기</button>
+    <h1></h1>
+    <script>
+        let input = document.querySelector('input')
+        let btn = document.querySelector('button')
+        let h1 = document.querySelector('h1')
+        btn.onclick = function()
+        {
+            //event 추가
+            let num = input.value   //num이라는 변수가 input에 저장된 value를 가지고 옴
+            if(num==0)
+                h1.textContent = '제로'
+            else if(num%2 == 0)
+                h1.textContent = '짝수'
+
+            else if(num%2 == 1)
+                h1.textContent = '홀수'
+            else
+                h1.textContent = '기타 : '+num
+        }
+    </script>
+</body>
+</html>

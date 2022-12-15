@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <input type="text" class="ins">
+    <button class="ins"></button> -->
+    <script>
+        function LOTTO() {
+            fir = new Array(45);
+            sec = new Array(6);
+            
+            for (i = 0; i < 45; i++) 
+                fir[i] = i + 1;
+
+            for (i = 0; i < 6; i++) {
+                ran = parseInt(Math.random() * fir.length);
+                sec[i] = fir[ran];
+                fir.splice(ran, 1); //뽑은 번호 지우기
+
+                //오름차순
+                for (h = fir.length; h; h -= 1) {
+                    j = Math.floor(Math.random() * h);
+                    x = fir[h - 1];
+                    fir[h - 1] = fir[j];
+                    fir[j] = x;
+                }
+            }
+
+            //무작위로 뽑은 번호를 오름차순으로 배치
+            for (i = 0; i < 6; i++) {
+                for (j = 0; j <= i; j++) {
+                    if (sec[i] <= sec[j]) {
+                        k = sec[i];
+                        sec[i] = sec[j];
+                        sec[j] = k;
+                    }
+                }
+            }
+            document.getElementById('ddd').innerHTML = sec;
+        }
+    </script>
+
+    <input id="button1" type="button" onclick="LOTTO()" value="Click">
+    <br><br>
+    <div id="ddd" style="font-size:30px;border:1px solid;width:300px;height:50px;text-align:center;padding:10px;">
+    </div>
+
+    </body>
+</html>

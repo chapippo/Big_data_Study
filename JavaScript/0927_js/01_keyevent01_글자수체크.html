@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1. keyevent</title>
+    <style>
+        /* 조건에 따라서 class 값을 다르게 줘보기 */
+        .red {background-color: pink;}
+        .black {background-color: grey;}
+    </style>
+</head>
+<body>
+    <h1></h1>
+    <textarea name="" id="" cols="30" rows="10"></textarea>
+    <script>
+        const mytextarea = document.querySelector('textarea')
+        const myh1 = document.querySelector('h1')  //h1 태그 만든 후 자바스크립트로 가리킴
+        mytextarea.addEventListener('keyup',    //addEventListener : mytextarea한테 이벤트
+        function()                              //keyup : 내가 키보드를 눌렀다 놨을 때
+        {
+            const mylength = mytextarea.value.length
+            if(mylength >= Number(20))
+            {
+                //직접적으로 스타일을 바꾼 것
+                myh1.style.color = 'red'
+                //간접적으로 바꿈 //특정 클래스명을 추가할 것
+                myh1.setAttribute('class','red')
+            }
+            else
+            {
+                myh1.style.color = 'black'
+                myh1.setAttribute('class','black')
+            }
+            myh1.textContent = `글자수 : ${mylength}`
+        })
+    </script>
+</body>
+</html>

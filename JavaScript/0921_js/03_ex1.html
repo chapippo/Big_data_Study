@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="num">
+    <button id="check">체크</button>
+    <h1 id="출력"></h1>
+    <script>       
+        let input = document.querySelector('#num')
+        let result = document.querySelector('h1')
+        check.onclick=function()
+        {
+        if(input == 0)
+            // alert('제로')
+            result.textContent='제로'
+        else if(input%2 == 0)
+            // alert('짝수')
+            result.textContent='짝수'
+
+        else if(input%2 == 1)
+            // alert('홀수')
+            result.textContent='홀수'
+        else
+            // alert('기타. '+input)
+            result.textContent='기타. '+input
+        }
+    </script>
+    
+</body>
+</html>

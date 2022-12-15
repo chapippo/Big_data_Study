@@ -1,0 +1,23 @@
+태양=
+{
+    이름 : '태양',
+    사진 : 'https://w7.pngwing.com/pngs/16/608/png-transparent-sun-the-sun-sunscreen-light-sphere-sun-image-file-formats-orange-sphere-thumbnail.png'
+}
+
+지구=
+{
+    이름 : '지구',
+    사진 : 'https://w7.pngwing.com/pngs/502/443/png-transparent-earth-europe-planet-cloud-earth-globe-photography-poster.png'
+}
+
+달=
+{
+    이름 : '달',
+    사진 : 'https://toppng.com/uploads/preview/moon-115309715939lc2praf0e.png'
+}
+
+하늘=
+{
+    이름 : '하늘',
+    사진 : 'nightsky.jpg'
+}

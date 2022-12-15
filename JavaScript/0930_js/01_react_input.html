@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0929 실습02</title>
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>    
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        let name = prompt('이름이 뭐예요?')
+        let imageUrl
+        
+        let component 
+        if(name=='개')
+        {
+            imageUrl = 'https://dimg.donga.com/ugc/CDB/SHINDONGA/Article/5e/0d/9f/01/5e0d9f011a9ad2738de6.jpg'
+        }
+        else if(name=='토끼')
+        {
+            imageUrl = 'https://cdn.gjdream.com/news/photo/old/news/contents/UPFILE/2019/20190707497381.jpg'
+        }
+        else
+        {
+            imageUrl = 'https://t1.daumcdn.net/cfile/tistory/1944F8424E1096302D'
+        }
+        component = 
+        <div>
+            <h1>{name}</h1>
+            <img src={imageUrl}/>
+        </div>
+        const container = document.getElementById('root')
+        ReactDOM.render(component,container)
+    </script>
+</body>
+</html>

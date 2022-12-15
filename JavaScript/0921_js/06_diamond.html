@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- pre 태그 안에서는 띄어쓰기가 됨 -->
+    <pre>
+        <h1></h1>
+    </pre>
+
+    <script>
+        let output = '' //output이라는 비어있는 문자 만듦
+        const SIZE = 5  //다이아몬드 크기 5
+        for(let i = 1; i<=SIZE; i++)    //i값이 증가함에 따라서 38
+        {
+            //스페이스바
+            for(let j = SIZE; j>i; j--) //띄어쓰기 값이 줄어듦 41
+                output += ' '
+            //별 찍는 부분
+            for(let k = 0; k<2*i-1; k++)    //별은 2*i-1 패턴으로 늘어남
+                output += '*'
+
+            output +='\n'
+        }
+        for(let i = SIZE-1; i>0; i--)   //처음엔 i가 4
+        {
+            for(let j = SIZE; j>i; j--) //size=5
+                output += ' '
+            for(let k = 0; k<2*i-1; k++)
+                output += '*'
+
+            output +='\n'
+        }
+        console.log(output)
+        document.querySelector('h1').textContent=output
+    </script>
+    
+</body>
+</html>

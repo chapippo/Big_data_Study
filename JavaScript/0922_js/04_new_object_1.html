@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1></h1>
+    <script>
+        function Student(name, age, score) {    // function을 통해서 객체배열 만들 수 있음
+            this.name = name
+            this.age = age
+            this.score = score
+                        
+            //객체 안에 있는 함수를 각각 호출할 수 있다
+            this.study = function() {
+                // ` <- 그레이브키(`~)
+                console.log (`${this.name}학생은 ${this.score}점 답게 공부해요`)
+            }
+        }
+        
+        let Students = []
+        Students[0] = new Student('김이나',32,50)
+        Students[1] = new Student('이정환',20,80)
+        Students[2] = new Student('장태연',25,100)
+
+        //iterator : 배열 안에 있는 값
+        for (const iterator of Students) {
+            console.log(iterator)
+            console.log(iterator.name)
+            console.log(iterator.age)
+            console.log(iterator.score)
+            iterator.study()
+        }
+
+    </script>
+    
+</body>
+</html>

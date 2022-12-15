@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1></h1>
+                <!-- function말고 class라는 문법으로 -->
+                <!--  -->
+    <script>    //class 문법을 통해서 Student라는 객체를 만든 것, 생성자@@ ()
+        class Student {
+            constructor(이름, 나이, 점수) { // 변수를 만들 때(선언할 때 값 주고) 필요
+                this.이름 = 이름
+                this.나이 = 나이
+                this.점수 = 점수
+            }
+            tostring() {    //여기 값을 string 형태로 바꿔서
+                return `${this.이름}, ${this.나이}, ${this.점수}`
+            }
+        }
+        let s = new Student('최호준', 24, 85)
+        document.querySelector('h1').textContent = s.tostring()
+    </script>
+    
+</body>
+</html>

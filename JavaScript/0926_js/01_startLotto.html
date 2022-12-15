@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1.로또(실습1,0926)</title>
+    <script src="01_genLotto.js"></script>
+</head>
+<body>
+    <h1></h1>
+    <script>
+        let lotto = genLotto()  //배열을 리턴해서 lotto에 넣고
+        let output = ''
+        for(let item of lotto)  //배열의 길이만큼 for문
+            output += item+' '
+        
+            
+        //보너스 번호 뽑기
+        let bns = Math.floor(Math.random()*45)+1
+        for(let i=0; i<lotto.length; i++)
+        {
+            if(lotto[i] == bns)
+            {
+                bns = Math.floor(Math.random()*45)+1
+                i=-1
+            }
+        }
+        output += '보너스: ' + bns
+
+
+        document.querySelector('h1').textContent=output
+    </script>
+        
+</body>
+</html>

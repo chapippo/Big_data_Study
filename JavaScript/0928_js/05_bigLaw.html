@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5. 대수의 법칙</title>
+    <script src="jq.js"></script>
+    <script>
+        //$(function(){}) <- window.onload와 동일
+        $(function() {
+            //jQuery에서 text 불러오는 법과 text 바꾸는 법
+            //1) 바꾸는 법
+            // $('h1:first').text('일') 
+            //세팅할 때는 매개변수 안에 값 넣어야 ex)'일'
+            
+            //2) 텍스트 받아오기
+            let mytext = $('h1:first').text()
+            console.log(mytext)
+                        
+
+            let input = prompt('주사위를 던지세요')
+            input = Number(input)
+
+
+            let diceNum = []
+
+            for(let i=0; i<input; i++)
+            {
+                dice = (Math.floor(Math.random()*6))+1
+
+                for(let j=0; j<6; j++)
+                {
+                    if(dice == j)
+                        diceNum[j]++
+                }
+            }
+
+
+            if(diceNum == 1)
+            {
+                diceNum[0]++
+            }
+            else if(diceNum == 2)
+            {
+                diceNum[1]++
+            }
+            else if(diceNum == 3)
+            {
+                diceNum[2]++
+            }
+            else if(diceNum == 4)
+            {
+                diceNum[3]++
+            }
+            else if(diceNum == 5)
+            {
+                diceNum[4]++
+            }
+            else if(diceNum == 6)
+            {
+                diceNum[5]++
+            }
+
+            // $('h1.a1').text('cnt1')
+            $('h1.a1').
+            $('h1.a2').text('cnt2')
+            $('h1.a3').text('')
+            $('h1.a4').text('')
+            $('h1.a5').text('')
+            $('h1.a6').text('')
+
+
+
+
+
+        })
+    </script>
+</head>
+<body>
+    <h1>1</h1>
+    <h1 class="a1">0</h1>   <!--횟수-->
+    <h2 class="a1">0</h2>   <!--확률-->
+    <h1>2</h1>
+    <h1 class="a2">0</h1>
+    <h2 class="a2">0</h2>
+    <h1>3</h1>
+    <h1 class="a3">0</h1>
+    <h2 class="a3">0</h2>
+    <h1>4</h1>
+    <h1 class="a4">0</h1>
+    <h2 class="a4">0</h2>
+    <h1>5</h1>
+    <h1 class="a5">0</h1>
+    <h2 class="a5">0</h2>
+    <h1>6</h1>
+    <h1 class="a6">0</h1>
+    <h2 class="a6">0</h2>
+</body>
+</html>
