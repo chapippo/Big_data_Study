@@ -1,0 +1,13 @@
+<!DOCTYPE html> <!DOCTYPE html>선언은 이 문서가 HTML5 문서임을 정의합니다 .
+<html>	<!--태그-->
+<head>
+	<!--head : 탭부분 디자인-->
+</head>
+<body>
+	<!--body : 페이지 디자인-->
+    <h1>This is a Heading</h1> <!--h1 : 제목-->
+    <p>This is a paragraph1.</p> <!--p : 본문-->  단락태그
+    <p>This is a paragraph2.</p> <!--태그를 열었으면 꼭 닫아야 @@@ 중괄호 닫는 것처럼-->
+</body>
+<!--중괄호 열고 닫는 것처럼 태그도 열고 닫아야 함-->
+</html>

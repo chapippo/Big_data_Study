@@ -1,0 +1,73 @@
+<!--현재 파일이 html 파일이라는 것을 명시-->
+<!DOCTYPE html>
+<html>      <!--우리가 알고있는 main과 비슷하게 보면 됨-->
+    <head>
+        <!--head: 탭 부분 표현, body 부분 스타일 등에 필요한 기능 import-->
+        <!--title 태그를 통해 탭 이름 지정-->
+        <title>Hello World</title>
+        <!--html: 화면을 어떻게 구성하는가에 초점을 맞춤 (화면 구현)-->
+        <!--css: 화면을 어떻게 표현하는가에 초점을 맞춤 (화면 디자인)-->
+        <!--style: css 부분과 큰 연관이 있음-->
+        <!--내부 css : head에 style 태그 만들어 스타일 정의-->
+        <style>
+            h3{
+                background-color: darkturquoise;
+            }
+            p{
+                color:darkmagenta;
+            }
+            table, th, td{
+                border: 1px solid black
+            }
+        </style>
+    </head>
+    <body>
+        <!--body: 여기에서 페이지 구성을 주로 함-->
+        <!--h 태그: 제목 태그 (꼭 제목을 쓸 게 아니어도 사용 가능)-->
+            <!--h1부터 h6까지 있었음, 글자 크기 다름-->
+        <!--p 태그: 단락 태그 (본문 작성 시 주로 사용)-->
+        <!--br: 줄 바꿈 태그-->
+        <!--hr: 기다란 줄을 표현하면서 단락을 구분-->
+
+        <!--속성: 시작 태그 안에서 해당 태그를 보조해주는 역할-->
+        <!--a 태그의 href 속성: 어떠한 문구에 하이퍼링크 걸어 특정 사이트로 이동-->
+        <!--img 태그: 사진을 불러오는 태그-->
+            <!--src 속성: 어떤 사진을 불러올지 결정, width/height: 사진의 크기 결정-->
+        <!--style 속성: 속해있는 태그를 꾸며주는 역할을 수행-->
+        <h3 style="font-family:monospace;">이 글꼴은 monospace 적용한 결과</h3>
+        <h3 style="font-family:courier;">이 글꼴은 courier 적용한 결과</h3>
+        <br>
+
+        <!--style:font-size :: px 사이즈로 적용할 수도, %비율로도 적용 가능-->
+        <h3 style="font-size:200%;">h3 글꼴 크기의 200% 적용한 결과</h3>
+        <h3 style="font-size:50%;">h3 글꼴 크기의 50% 적용한 결과</h3>
+
+        <!--style:text-align :: 해당 태그의 내용 줄맞춤-->
+        <p style="text-align:center;">중간 맞춤한 p 태그</p>
+        <p style="text-align:right;">오른쪽 맞춤한 p 태그</p>
+
+        <!--b 태그: 글자를 굵게 설정(bold)-->
+        <!--i 태그: 글자를 기울여서 설정(italic)-->
+        <p>이거는 <b>b 태그 설정한 bold 글꼴</b></p>
+        <p>이거는 <strong>strong 태그 설정한 글꼴</strong></p>
+        <p>이거는 <i>i 태그 설정한 italic 글꼴</i></p>
+        <!--del: 삭제된 텍스트 8958-->
+
+        <h3>테이블 만들기</h3>
+        <!--table 태그: 흔히 알고있는 표를 만드는 태그-->
+        <table>                      <!-- border="1" ///style="border:1px solid black;" -->
+            <tr>    <!--tr: 행 하나를 구성하는 태그-->
+                <th>우선순위</th>   <!--th: 해당 행에 대한 구성요소(head)-->
+                <th>할일</th>
+            </tr>
+            <tr>
+                <td>1</td>       <!--td: 해당 행에 대한 구성요소(data)-->
+                <td>숙면</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>백준 풀기</td>
+            </tr>
+        </table>
+    </body>
+</html>

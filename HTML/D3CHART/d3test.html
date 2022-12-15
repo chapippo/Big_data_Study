@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        svg {
+            height: 240px;
+        }
+        rect {
+            fill: orange;
+        }
+    </style>
+</head>
+<body>
+    <h1>막대 그래프 만들기</h1>
+    <svg id="myg"></svg>	 <!--svg: 그림 그리는 태그-->
+    <script>
+        let dataSet = [10,20,50,100,200]
+        d3.select("#myg")
+        .selectAll("rect")	//rect가 당장에는 없다??
+        .data(dataSet)
+        .enter()	//enter : 밑에서 rect를 append 할 건데 enter()는 이제 그걸 모자란만큼 한다는 뜻
+        .append("rect")
+        .attr("x",0)
+        .attr("y", (d,i)=>{return i*35})	//(d,i) d:데이터, i:인덱스
+        .attr("height",25)
+        .attr("width", (d,i)=>{return d})
+    </script>
+    
+</body>
+</html>

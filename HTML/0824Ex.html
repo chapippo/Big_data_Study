@@ -1,0 +1,52 @@
+<!DOCTYPE html>     <!--현재 파일이 html 파일인 것을 명시-->
+<html>
+    <head>
+        <!--"머리" :: 탭 부분 표현 및 body부분 표현하는 데에 필요한 기능 import-->
+        <title>html 기초</title>
+    </head>
+    <body style="background-color:aquamarine;">
+        <!--"몸통" :: 본문, 주요 페이지 표현을 담당-->
+        <h1 style="background-color:whitesmoke;">h 태그: "제목 태그" (이건 h1 태그)</h1>    <!--h1에서 h6까지 있음-->
+        <h3 style="background-color:whitesmoke;">이건 h3 태그</h3>
+        <h6 style="background-color:whitesmoke;">이건 h6 태그</h6>
+        <br>                        <!--줄 바꿈 태그-->
+        <p>p 태그: "단락 태그"</p>
+        <p>p 태그: "같지만 다른 단락"</p>
+
+        <!-- (ex) 시작태그: <h1>, 종료태그: </h1> -->
+
+        <!--속성: 시작태그 안에서 미리 설정함-->
+        <!--a 태그의 href 속성: 어떠한 문장에 하이퍼링크를 걸어 특정 사이트로 이동-->
+        <a href="https://serieamania.com/g2/bbs/board.php?bo_table=freetalk">여기는 자유게시판</a>
+        <br>
+        <hr>                        <!--기다란 줄로 구분-->
+
+        <!--img 태그: 사진을 불러오는 태그-->
+        <!--src 속성: 불러올 사진을 지정, alt: 사진 표현이 비정상적일 때 대체 텍스트 지정-->
+        <!--src 속성: 기기에 저장되어있는 사진명이나 사진의 링크 삽입-->
+        <!--width, height 속성: 사진의 크기를 지정-->
+        <img src="https://serieamania.com/g2/data/file/freetalk/view_thumbnail/mania-done-1661318210_OrIYHEC9_9d7f6a6f00a8740624ae58cefe996403.jpg" 
+        alt="롤이냐 스타냐" width="400" height="230">
+        <br>
+
+        <!--style 속성: 글자 크기/색상, 백그라운드 색상 등 여러가지 스타일 지정 가능-->
+        <!--b 태그: 글자를 더 굵게 설정-->
+        <p style="color:red; font-size:30px"><b>이거는 빨간색 글씨</b></p>
+        <p style="color:blue; font-size:30px">이거는 파란색 글씨</p>
+        <br>
+
+        <!--p 태그: 중간에 br 태그가 아닌 Enter키로 줄바꿈한 것은 개행이 수행되지 않음-->
+        <p>
+            p 태그로 작성하였을 때: <br>
+            이것은 첫번째 문장입니다.
+            이것은 두번째 문장입니다.
+        </p>
+        <!--pre 태그: br 태그(줄바꿈 태그) 없이도 태그 안의 내용 그대로 반영-->
+        <pre>
+            pre 태그로 작성하였을 때:
+            이것은 첫번째 문장입니다.
+            이것은 두번째 문장입니다.
+        </pre>
+
+    </body>
+</html>
