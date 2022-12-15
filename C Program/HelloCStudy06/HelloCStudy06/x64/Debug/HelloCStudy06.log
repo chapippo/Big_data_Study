@@ -1,0 +1,4 @@
+﻿  CStudy06.c
+C:\Users\chacha\Desktop\CHA\나의 HelloCStudy\HelloCStudy06\HelloCStudy06\CStudy06.c(44,2): warning C4013: 'gets'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+C:\Users\chacha\Desktop\CHA\나의 HelloCStudy\HelloCStudy06\HelloCStudy06\CStudy06.c(8,11): warning C4305: '초기화 중': 'int'에서 'char'(으)로 잘립니다.
+  HelloCStudy06.vcxproj -> C:\Users\chacha\Desktop\CHA\나의 HelloCStudy\HelloCStudy06\x64\Debug\HelloCStudy06.exe

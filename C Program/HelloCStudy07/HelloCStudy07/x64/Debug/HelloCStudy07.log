@@ -1,0 +1,7 @@
+﻿  CStudy01.c
+C:\Users\chacha\Desktop\CHA\나의 HelloCStudy\HelloCStudy07\HelloCStudy07\CStudy01.c(21,9): warning C4477: 'printf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 2의 형식이 'int *'입니다.
+C:\Users\chacha\Desktop\CHA\나의 HelloCStudy\HelloCStudy07\HelloCStudy07\CStudy01.c(21,9): warning C4313: 'printf': 서식 문자열의 '%d'이(가) int *' 형식의 인수 2과(와) 충돌합니다.
+C:\Users\chacha\Desktop\CHA\나의 HelloCStudy\HelloCStudy07\HelloCStudy07\CStudy01.c(23,9): warning C4477: 'printf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 2의 형식이 'double *'입니다.
+C:\Users\chacha\Desktop\CHA\나의 HelloCStudy\HelloCStudy07\HelloCStudy07\CStudy01.c(23,9): warning C4313: 'printf': 서식 문자열의 '%d'이(가) double *' 형식의 인수 2과(와) 충돌합니다.
+C:\Users\chacha\Desktop\CHA\나의 HelloCStudy\HelloCStudy07\HelloCStudy07\CStudy01.c(52,7): error C2374: 'ptr_a': 재정의. 여러 번 초기화했습니다.
+C:\Users\chacha\Desktop\CHA\나의 HelloCStudy\HelloCStudy07\HelloCStudy07\CStudy01.c(29): message : 'ptr_a' 선언을 참조하십시오.
