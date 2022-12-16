@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12. 박스속성(box-sizing)</title>
+    <style>
+        div {
+            margin: 10px; /* 바깥에 여백 */
+            padding: 10px; /*  */
+            border: 10px solid black;
+            width: 100px;   /* 안에 알맹이 */
+            height: 100px;  /* 안에 알맹이 */
+        }
+        #blue {
+            background-color: blue;
+            box-sizing: border-box; /* border까지 포함해서 100x100, content-box에 비해 사이즈가 더 작음 */
+        }
+        #red {
+            background-color: red;
+            /* content-box는 기본값임 */
+            box-sizing: content-box;
+        }
+    </style>
+</head>
+<body>
+    <div id="red"></div>
+    <div id="blue"></div>    
+</body>
+</html>

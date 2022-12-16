@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6. position</title>
+    <style>
+        /* zindex */
+        .box {width: 100px; height: 100px; position: absolute;}
+        .red {z-index: 100; background-color: red; left: 50px; top: 50px;}
+        .green {z-index: 110; background-color: green; left: 20px; top: 0px;}
+        .blue {z-index: 105; background-color: blue;}
+
+        body>div
+        {
+            position: relative;
+            width: 500px;
+            height: 100px;
+            overflow: hidden;
+            /* overflow: scroll; */
+            border: 1px solid black; /*테두리 그려서 확인*/
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Lorem ipsum dolor sit amet.</h1>
+    <div>
+        <!-- div 안에서만 움직이게, h1 침범 안 하게 -->
+        <div class="box red"></div>
+        <div class="box green"></div>
+        <div class="box blue"></div>
+    </div>
+    <h1>Lorem ipsum dolor sit amet consectetur adipisicing.</h1>
+    
+</body>
+</html>

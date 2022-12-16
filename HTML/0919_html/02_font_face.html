@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2. 글꼴 적용</title>
+    <!-- 다운받지 않고 글꼴을 적용할 때는 style태그를 따로 만들어서 -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Stylish&display=swap');
+    </style>
+    
+    <style>
+    @font-face {
+        font-family: 성실체;
+        src: url('나눔손글씨\ 성실체.ttf');
+    }
+    h1 {
+        /* 원래는 설치를 한 뒤 글꼴 이름인 Nanum SeongSirCe라고 적어야 함
+        하지만 font-face 덕에 내가 지정한 이름 사용한 것 !! 
+        원하는 이름 설정해서 사용할 수 있음*/
+        font-family: 성실체;
+    }
+    /* 원래 컴퓨터에 깔린 글꼴 */
+    h2 {
+        font-family: 궁서체;
+    }    
+    h3 {
+        font-family: 'Stylish', sans-serif;
+    }
+    </style>
+</head>
+<body>
+    <h1>안녕하세요 ^^</h1>
+    <h2>안녕하세요 +_+</h2>
+    <h3>안녕하세요. 좋은 아침이에요.</h3>
+</body>
+</html>

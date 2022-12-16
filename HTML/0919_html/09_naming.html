@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8.Display : 영역에 이름 붙이기</title>
+    <style>
+        #container>div 
+        {
+            border: 1px solid black;
+            background-color: springgreen;
+
+            /* 글자 너무 길면 자르기 */
+            /* overflow: hidden; */
+        }
+        #container
+        {
+            display: grid;
+
+            /* cell별 여백 */
+            gap: 10px;
+            /* 크기가 늘어나고 줄어들면서 비율은 유지됨 
+            화면 크기가 변화해도 셀의 크기비율을 유지*/
+            grid-template-columns: 1fr 200px 1fr;
+            grid-template-rows: 100px 1fr;
+
+            /* 참고사항 , 위와 동일한 의미*/
+            /* grid-template: 1fr 200px 1fr / 50px 1fr; */
+
+            /* (여기 있는 값이 grid-area값) grid-area값을 이용한 셀병합 등 하기 
+            gird-area: 특정 셀영역 이름 */
+            grid-template-areas: 
+            'Header Header'
+            'Aside Section'
+            'Footer Footer';
+        }
+        /* 특정 셀 영역 이름 부여 */
+        .Header{grid-area: Header;}
+        .Aside{grid-area: Aside;}
+        .Section{grid-area: Section;}
+        .Footer{grid-area: Footer;}
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="Header">안녕하세요. Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto itaque accusantium possimus alias nesciunt, laborum, iusto facere commodi, et obcaecati atque reprehenderit illum expedita eos rerum nisi mollitia iure qui!</div>
+        <div class="Aside">안녕하세요. Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto itaque accusantium possimus alias nesciunt, laborum, iusto facere commodi, et obcaecati atque reprehenderit illum expedita eos rerum nisi mollitia iure qui!</div>
+        <div class="Section">안녕하세요. Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto itaque accusantium possimus alias nesciunt, laborum, iusto facere commodi, et obcaecati atque reprehenderit illum expedita eos rerum nisi mollitia iure qui!</div>
+        <div class="Footer">안녕하세요. Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto itaque accusantium possimus alias nesciunt, laborum, iusto facere commodi, et obcaecati atque reprehenderit illum expedita eos rerum nisi mollitia iure qui!</div>
+    </div>    
+</body>
+</html>

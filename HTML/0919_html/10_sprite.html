@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10. 이미지 파일 sprite</title>
+    <style>
+        /* 이미지 파일을 여러개 올리면 웹페이지 과부하
+        그래서 모든 이미지를 하나의 이미지 파일로 합친다
+        toptal sprite 에서 */
+        /* 하나의 큰 이미지를 업로드 후 해당 이미지에서 원하는 부분만을
+        추출하여 i태그에 적용하여 아이콘 이미지 사용 = sprite*/
+        
+        /* i태그 = 아이콘 삽입하려고 넣은 코드
+        이미지를 불러오려면 inline-block을 넣어줘야 */
+        i{display: inline-block;}
+        
+        /* .bg-header_left_button { */
+        .btn {
+        width: 62px; height: 32px;
+        background: url('css_sprites.png') -10px -10px;
+        }
+        /* .bg-header_right_button { */
+        .lines{
+        width: 32px; height: 32px;
+        background: url('css_sprites.png') -92px -10px;
+        }
+    </style>
+</head>
+<body>
+    <i class="btn"></i>
+    <i class="lines"></i>
+</body>
+</html>

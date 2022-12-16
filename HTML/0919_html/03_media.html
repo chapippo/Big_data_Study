@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3.media</title>
+    <style>
+        /* 반응형 웹 만들 때 쓰이는 것 */
+        @media screen and (max-width:767px) {
+            body {
+                color: red;
+                background-color: aqua;
+            }            
+        }
+        @media screen and (min-width:768px) and (max-width:959px) {
+            body {
+                color: yellow;
+            }                       
+        }
+        @media screen and (min-width:960px) {
+            body {
+                background-color: blueviolet;
+            }
+        }
+        /* 인쇄시 적용 (참고만) */
+        @media print {
+            body {
+                background-color: black;
+                color: yellow;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>좋은 아침.</h1>
+    
+</body>
+</html>

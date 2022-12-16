@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>16. 구조선택자 child</title>
+    <style>
+        h1:first-child  /*첫번째 자손*/ /*순서가 중요*/
+        {
+            color:red
+        }
+        h1:first-of-type    /*타입이 중요*/
+        {
+            background-color: pink;
+        }
+        /* (2) -> 2번째만 가리킴, (2n) -> 짝수번째 가리킴 */
+        h1:nth-child(2)
+        {
+            border: 2px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <p>Lorem, ipsum dolor.</p>
+    <h1>asdfg</h1>
+    <h1>asdfg</h1>
+    <h1>asdfg</h1>
+    <div>
+        <h1>안녕</h1>
+        <h1>안녕</h1>
+        <h1>안녕</h1>
+    </div>
+    
+</body>
+</html>
+
+
+<!-- attr : 속성 -->

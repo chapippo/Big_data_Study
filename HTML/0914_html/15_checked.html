@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>15. checked</title>
+    <style>
+        /* input 태그(=checkbox)가 체크된 상태면 높이를 0으로 하고 */
+        /* check 안 되면 크기를 키운다. */
+        input[type=checkbox]:checked+div 
+        {
+            height: 0;  /* 상하 height 바꾸면 반대로 작동 */
+        }
+        
+        div
+        {
+            overflow: hidden;
+            /* width: 650px; */
+            height: 500px;
+            transition-duration: 1s; /* 변하는 시간 */
+        }
+    </style>
+</head>
+<body>
+    <input type="checkbox" name="" id="">
+    <div>
+        <h1>Lorem, ipsum dolor.</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, delectus! Dolorem sequi nostrum blanditiis nihil voluptatum deleniti numquam inventore incidunt temporibus officiis adipisci quae libero reprehenderit eos corrupti perferendis tempora iusto facere, eum provident molestias veritatis nam nobis dolore! Molestiae adipisci fuga repellendus in! Modi, nam deserunt accusantium iste assumenda impedit omnis ipsam rerum minus alias ratione voluptatibus! Repellat quia iste cupiditate officia, nam laboriosam esse! Aspernatur nesciunt tempora magni, velit quibusdam debitis! Ratione nobis ipsum facere harum laudantium ullam! Voluptate aliquid doloremque, veritatis dolorem ea error non eius! In iste fugit animi eius dolore sequi quaerat ex officiis est!</p>
+    </div>
+</body>
+</html>

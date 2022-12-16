@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11.자손 선택자</title>
+    <style>
+        #header>h1 {color:red}
+        /* #section h1 {color:orange} */
+        /* #section h1,p  <- id가 section인 태그 안의 h1 */
+        /* #section p {color:orange} */
+
+        #section>* 
+        {color:orange}
+
+        #section>h1, #section>p 
+        {
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <div id="nav"> <!-- header의 후손이지 자손이 아니다-->
+            <h1>네비</h1>
+        </div>
+        <h1>안녕</h1>   <!-- header의 자손임-->
+        <h1>하십니까</h1>
+    </div>
+    <div id="section">
+        <h1>헬로</h1>
+        <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+    <p>Lorem ipsum dolor sit amet consectetur.</p>
+</body>
+</html>

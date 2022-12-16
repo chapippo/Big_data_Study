@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9. 웹 표준</title>
+    <style>
+        #wrap {
+            width: 560px;
+            margin: 0 auto;
+        }
+        #aside {
+            float: left;
+            width: 200px;
+            background-color: pink;
+        }
+        /* 중간에 비는 30은 여백 */
+        #section {
+            float: right;
+            width: 330px;
+            background-color: black;
+            color: white;
+        }
+        /* contents :: aside와 section을 감싸는 태그 */
+        /* footer가 aside나 section 밑에 붙어서 이상한데
+        이 2개를 감싸는 거에 overflow: hidden 주면 해결됨
+        일종의 공식처럼 생각하자 */
+        #contents {
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+<div id="wrap">
+    <div id="header">
+        <h1>Header</h1>
+    </div>
+    <div id="navigation">
+        <h1>Navi</h1>
+    </div>
+    <div id="contents">
+        <div id="aside">
+            <h1>Aside</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus accusantium, eligendi distinctio cumque officia quia voluptatum, unde assumenda eos magnam, vel sed minima architecto dolorum qui porro quasi praesentium est.</p>
+        </div>
+        <div id="section">
+            <h1>Section</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis sed modi odio delectus, numquam quas animi expedita voluptate ipsum possimus culpa quidem ad, ratione atque, quia rem velit.</p>
+        </div>
+    </div>
+    <div id="footer">
+        <h1>footer</h1>
+    </div>
+</div>
+</body>
+</html>

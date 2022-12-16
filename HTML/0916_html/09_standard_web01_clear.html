@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9. 웹표준_clear</title>
+    <style>
+        #wrap {
+            width: 560px;
+            margin: 0 auto;
+        }
+        #aside {
+            float: left;
+            width: 200px;
+            background-color: pink;
+        }
+        /* 중간에 비는 30은 여백 */
+        #section {
+            float: right;
+            width: 330px;
+            background-color: black;
+            color: white;
+        }
+        
+        /* 투명막 같은 거 */
+        /* footer가 aside, section으로 올라오지 못 함 */
+        /* 옛날 웹브라우저에선 안 됨 */
+        .clear{
+            clear: both;
+        }
+
+        #demotext {
+        text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #FF2D95 0px 0px 20px, #FF2D95 0px 0px 30px,
+        #FF2D95 0px 0px 40px, #FF2D95 0px 0px 50px, #FF2D95 0px 0px 75px, -7px 15px 13px rgba(206,89,55,0);
+        color: #F5CAFB;
+        background: #333333;
+        font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+            <h1>header</h1>
+            <!-- https://html-css-js.com/css/generator/text-shadow/ -->
+            <div id="demotext">0916 1pm KST</div>
+        </div>
+        <div id="navigation">
+            <h1>Navi</h1>
+        </div>
+
+        <div id="aside">
+            <h1>Aside</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus accusantium, eligendi distinctio
+                cumque officia quia voluptatum, unde assumenda eos magnam, vel sed minima architecto dolorum qui
+                porro quasi praesentium est.</p>
+        </div>
+        <div id="section">
+            <h1>Section</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis sed modi odio delectus, numquam
+                quas animi expedita voluptate ipsum possimus culpa quidem ad, ratione atque, quia rem velit.</p>
+        </div>
+
+        <div class="clear"></div>
+        <div id="footer">
+            <h1>footer</h1>
+        </div>
+    </div>
+</body>
+</html>

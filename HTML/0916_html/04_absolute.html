@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4. absolute</title>
+    <style>
+        /*  */
+        .box {width: 100px; height: 100px;}
+        .red {background-color: red; left: 50px; top: 50px;}
+        .green {background-color: green; left: 50px; top: 0px; position: relative;}
+        .blue {background-color: blue;}
+        .pink {background-color: pink; position: absolute}
+        .smallBox {width: 30px; height: 30px; left: 10px; top:20px}
+
+    </style>
+</head>
+<body>
+    <!-- 부모 태그의 position 속성이 static일 경우(=기본) fixed와 동일 -->
+    <div class="box red">
+        <div class="pink smallBox">
+            <!-- 좌상단을 기준으로 -->
+        </div>
+    </div>
+    <div class="box green">
+        <div class="pink smallBox">
+            <!-- 부모태그가 relative -->
+        </div>
+    </div>
+    <div class="box blue">
+        
+    </div>
+    
+</body>
+</html>
