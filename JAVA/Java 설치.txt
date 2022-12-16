@@ -1,0 +1,30 @@
+오라클 들어가서 java 설치
+
+C:\Program Files\Java\jdk-18.0.2
+
+설치 위치 확인 후
+
+시스템 환경 변수 편집
+
+새로 만들기 
+
+변수 이름 : JAVA_HOME
+
+변수 값 : C:\Program Files\Java\jdk-18.0.2
+
+하고 나서
+
+Path 편집
+
+새로 만들기 : %JAVA_HOME%\bin\
+
+맨 위로 올리기
+
+- JAVA 설정 끝 -
+
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+
+이클립스 돋보기 - Console 검색 후 켜두기
+
+
+이클립스 한글 나오게 하기

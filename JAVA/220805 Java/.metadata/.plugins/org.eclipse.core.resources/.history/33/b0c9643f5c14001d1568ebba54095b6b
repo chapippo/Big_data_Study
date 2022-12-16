@@ -1,0 +1,80 @@
+import java.util.Scanner;
+
+public class Java0805 {
+	public static void main(String[] args) {
+		//저번 수업 review
+		
+		//출력문
+		//print(), println(), printf()
+		//printf() 언급
+		
+		System.out.print("print(): 나는 줄바꿈을 하지 못해요. ");
+		System.out.println("println(): 나는 줄바꿈을 자동으로 할 수 있어요.");
+		System.out.println(); //줄바꿈만 함
+		
+		
+		int year = 2022;
+		// C언어 출력문
+		// printf("지금은 %d년입니다.\n", year);
+		// 지금은 2022년입니다. (줄바꿈)
+		System.out.println("지금은 "+year+"년입니다.");
+		// 출력문에서 +는 문장 붙이기 용도
+		
+		
+		//입력문
+		// Scanner 변수 선언한다
+		// System.in : 사용자에게 입력을 요청
+		// Scanner : 입력받은 값을 읽어서 시스템에게 전달(값을 읽어들이는)
+		Scanner s=new Scanner(System.in); //최상단에 적어요
+		
+		//주요 입력문
+		// 정보를 입력받아서 프로필을 출력하기
+		String name=s.next(); //공백없는 문자열 입력
+		int age=s.nextInt();
+		boolean gender=s.nextBoolean(); //true:남자, false:여자
+		//if(true)
+		//{System.out.println(남자);
+		//}
+		//else
+		//{System.out.println(여자);
+		//}
+		
+		//boolean g1 = true;
+		//boolean g2 = false;
+		
+		double height=s.nextDouble();
+		char blood=s.next().charAt(0);
+		s.nextLine();
+		String mood=s.nextLine(); //공백있는 문자열 입력O
+		
+		System.out.println("이름: "+name);
+		System.out.println("나이: "+age);
+		
+		if(gender==true)
+		{System.out.println("성별: 남자");
+		}
+		else
+		{System.out.println("성별: 여자");
+		}
+		//System.out.println("성별: "+gender);
+		System.out.println("키: "+height);
+		System.out.println("혈액형: "+blood);
+		System.out.println("기분: "+mood);
+		
+		
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

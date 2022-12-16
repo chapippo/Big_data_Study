@@ -1,0 +1,13 @@
+
+public class Java0805 {
+	public static void main(String[] args) {
+		//저번 수업 review
+		
+		//출력문 : print(), println(), printf()
+		//printf() 언급
+		
+		System.out.print("print(): 나는 줄바꿈을 하지 못해요.");
+		System.out.println("println(): 나는 줄바꿈을 자동으로 할 수 있어요.");
+		System.out.println(); //줄바꿈만 함
+	}
+}
